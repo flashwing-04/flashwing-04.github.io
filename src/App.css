@@ -55,7 +55,7 @@ h1, h2, h3, h4, h5, h6{
 /* Navigation */
 nav.navbar{
   width: 100vw;
-  padding: 0.1rem 0;
+  padding: 2vh 0;
   top: 0;
   position: fixed;
   background: var(--background-color);
@@ -204,6 +204,8 @@ nav.navbar .navbar-toggler-icon:after {
   margin: 5vh 0 0 0;
   padding: 1.5vh 1.5vw;
   letter-spacing: 0.8px;
+  color: var(--accent-color1);
+  background: var(--background-color);
   border: 1px solid var(--accent-color1);
   align-items: center;
 }
@@ -227,9 +229,6 @@ nav.navbar .navbar-toggler-icon:after {
         transform: translateY(-20px);
     }
 }
-
-
-
 
 
 
@@ -262,5 +261,6 @@ nav.navbar .navbar-toggler-icon:after {
 
   .banner .wrap{
     font-size: 5vw;
+    border-right: 0.4px solid #b1b1b1;
   }
 }
