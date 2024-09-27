@@ -9,39 +9,50 @@ export const Banner = () => {
     // for typing Animation
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = ["undergrad Computer Science Student"]
+    const toRotate = ["undergrad Computer Science Student", "<placeholder for a really cool text>"];
     const [text, setText] = useState('');
-    const [delta, setDelta] = useState(300-Math.random()*100)
-    const period = 2000;
+    const [delta, setDelta] = useState(300); 
+    const period = 1500; 
+    const [lastTick, setLastTick] = useState(Date.now());
 
     useEffect(() => {
-        let ticker = setInterval(() => {
-            tick();
-        }, delta)
+        const tick = () => {
+            const now = Date.now();
+            const elapsed = now - lastTick;
 
-        return () => { clearInterval(ticker)};
-    }, [text])
+            if (elapsed >= delta) {
+                let i = loopNum % toRotate.length;
+                let fullText = toRotate[i];
+                let updatedText = isDeleting 
+                    ? fullText.substring(0, text.length - 1) 
+                    : fullText.substring(0, text.length + 1);
 
-    function tick() {
-        let i = loopNum % toRotate.length;
-        let fullText = toRotate[i];
-        let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
+                setText(updatedText);
 
-        setText(updatedText);
+                if (isDeleting) {
+                    setDelta(100);
+                }
 
-        if(isDeleting) {
-            setDelta(prevDelta => prevDelta/1.5)
-        }
+                if (!isDeleting && updatedText === fullText) {
+                    setIsDeleting(true);
+                    setDelta(period);
+                } else if (isDeleting && updatedText === '') {
+                    setIsDeleting(false);
+                    setLoopNum(loopNum + 1);
+                    setDelta(300);
+                }
 
-        if(!isDeleting && updatedText === fullText) {
-            setIsDeleting(true);
-            setDelta(period);
-        } else if(isDeleting && updatedText === '') {
-            setIsDeleting(false);
-            setLoopNum(loopNum + 1)
-            setDelta(500);
-        }
-    }
+                setLastTick(now);
+            }
+            requestAnimationFrame(tick);
+        };
+
+        const animationFrameId = requestAnimationFrame(tick);
+        
+        return () => {
+            cancelAnimationFrame(animationFrameId);
+        };
+    }, [text, loopNum, isDeleting]);
 
     return(
         <section className="banner" id="home">
