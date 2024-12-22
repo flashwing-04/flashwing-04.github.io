@@ -21,11 +21,12 @@
     --accent-color1: #000000;
     --accent-color2: #128058;
     --accent-color3: #FF66C4;
+    --text-color: #393939;
 
     margin:0;
     padding:0;
 
-    font-size: 1.2vw;
+    font-size: calc(1vw + 1vh);
 
     box-sizing: border-box;;
 }
@@ -148,7 +149,7 @@ nav.navbar .navbar-toggler-icon:after,
 nav.navbar .navbar-toggler-icon:before {
 	width: 24px;
 	position: absolute;
-	height: 0.2px;
+	height: 2px;
 	background-color: var(--accent-color1);
 	top: 0;
 	left: 0;
@@ -158,14 +159,20 @@ nav.navbar .navbar-toggler-icon:before {
 
 nav.navbar .navbar-toggler-icon:after {
 	top: 7.5px;
-  height: 1.5px;
 }
 
 
 /* Banner */
 .banner {
-  margin: 10vh 0 0 0;
-  padding: 4rem 0;
+  height: 100vh;
+  padding: 10rem 4rem 5rem 4rem;
+
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center;
+  align-items: flex-start;
+
+  border-bottom: 1px solid var(--accent-color1);
 }
 
 .banner .tagline {
@@ -194,7 +201,7 @@ nav.navbar .navbar-toggler-icon:after {
 }
 
 .banner p {
-  color: #393939;
+  color: var(--text-color);
   letter-spacing: 0.8px;
   line-height: 1.5rem;
 }
@@ -209,35 +216,8 @@ nav.navbar .navbar-toggler-icon:after {
   border: 1px solid var(--accent-color1);
   align-items: center;
 }
- 
-.banner img {
-  position: relative;
-  width: 100%;
-  opacity: 0.65;
-  z-index: -1;
-  animation: updown 3s linear infinite;
-}
-
-@keyframes updown {
-    0% {
-        transform: translateY(-20px);
-    }
-    50% {
-        transform: translateY(20px);
-    }
-    100% {
-        transform: translateY(-20px);
-    }
-}
-
-
-
 
 @media (max-width: 991.98px) { /* Bootstrap Standard Breakpoint for lg */
-  *{
-    font-size: 2.8vw;
-  }
- 
   nav.navbar a.navbar-brand{
     width: 25%;
   }
@@ -261,7 +241,6 @@ nav.navbar .navbar-toggler-icon:after {
 
   .banner .wrap{
     font-size: 5vw;
-
     border-right: 0.4px solid #b1b1b1;
   }
 }
