@@ -26,8 +26,6 @@
     margin:0;
     padding:0;
 
-    font-size: calc(1vw + 1vh);
-
     box-sizing: border-box;;
 }
 
@@ -57,7 +55,6 @@ h1, h2, h3, h4, h5, h6{
 nav.navbar{
   width: 100vw;
   padding: 2vh 0;
-  top: 0;
   position: fixed;
   background: var(--background-color);
   border-bottom: 2px solid var(--accent-color1);
@@ -65,15 +62,11 @@ nav.navbar{
 }
 
 nav.navbar a.navbar-brand{
-  width: 15vw;
-}
-
-nav.navbar a.navbar-brand img{
-  width: 100%;
+  width: 10vw;
 }
 
 nav.navbar .navbar-nav{
-  margin: 0 0 0 10vw;
+  margin-left: auto;
 }
 
 nav.navbar .navbar-nav .navbar-link{
@@ -99,24 +92,17 @@ nav.navbar .navbar-nav .navbar-link:hover::after{
   width: 100%;
 }
 
-span.navbar-text{
-  width: 20%;
+.navbar-text{
   display: flex;
   justify-content: flex-end;
 }
 
-.social-icon{
-  display: inline-block;
-}
-
 .social-icon img{
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 
 .social-icon a{
-  width: 50px;
-  height: 50px;
   margin: 0 1rem 0 0;
   border: 1px solid var(--accent-color1);
   border-radius: 50%;
@@ -133,39 +119,13 @@ nav.navbar .navbar-toggler:active,
 nav.navbar .navbar-toggler:focus {
 	outline: none;
   box-shadow: none;
-}
-
-nav.navbar .navbar-toggler-icon {
-  width: 24px;
-  height: 17px;
-  background-image: none;
-  position: relative;
-  border-bottom: 2px solid var(--accent-color1);
-  transition: all 300ms linear;
-  top: -2px;
-}
-
-nav.navbar .navbar-toggler-icon:after,
-nav.navbar .navbar-toggler-icon:before {
-	width: 24px;
-	position: absolute;
-	height: 2px;
-	background-color: var(--accent-color1);
-	top: 0;
-	left: 0;
-	content: '';
-	z-index: 2;
-}
-
-nav.navbar .navbar-toggler-icon:after {
-	top: 7.5px;
-}
+} 
 
 
 /* Banner */
 .banner {
   height: 100vh;
-  padding: 10rem 4rem 5rem 4rem;
+  padding: 10rem 2rem 5rem 2rem;
 
   display: flex; 
   flex-direction: column; 
@@ -181,18 +141,14 @@ nav.navbar .navbar-toggler-icon:after {
   padding: 0.5rem 0.3rem;
   background: linear-gradient(90.21deg, #FF66C447 -5.91%, #12805847 111.58%);
   margin-bottom: 1rem;
-  display: inline-block;
 }
 
 .banner h1 {
   width: 60vw;
-  height: 12vw;
   font-size: 4vw;
   font-weight: 800;
   letter-spacing: 0.8px;
-  line-height: 1;
   margin-bottom: 2rem;
-  display: block;
 }
 
 .banner .wrap {
@@ -210,11 +166,9 @@ nav.navbar .navbar-toggler-icon:after {
   font-weight: 400;
   margin: 5vh 0 0 0;
   padding: 1.5vh 1.5vw;
-  letter-spacing: 0.8px;
   color: var(--accent-color1);
   background: var(--background-color);
   border: 1px solid var(--accent-color1);
-  align-items: center;
 }
 
 @media (max-width: 991.98px) { /* Bootstrap Standard Breakpoint for lg */
@@ -222,16 +176,16 @@ nav.navbar .navbar-toggler-icon:after {
     width: 25%;
   }
 
+  .navbar-nav .navbar-link {
+    padding: 0.5rem;
+    margin-left: 0;
+  }
+
   nav.navbar .navbar-nav .navbar-link:hover::after{
     width: 20%;
   }
 
-  nav.navbar .navbar-nav .navbar-link{
-    margin: 0 0 0 10%;
-    padding: 0.5rem;
-  }
-
-  span.navbar-text{
+  .navbar-text {
     display: none;
   }
 

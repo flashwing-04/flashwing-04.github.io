@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 
 export const Banner = () => {
 
-    // for typing Animation
+    // typing Animation
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
     const toRotate = ["undergrad Computer Science Student", "<placeholder for really cool text>"]
@@ -47,7 +47,7 @@ export const Banner = () => {
                 <h1>{'Hi, I\'m an '}<span className="wrap">{text}</span></h1>
             </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-            <button onClick={() => HTMLFormControlsCollection.log('connect')}>Let's connect </button>
+            <button onClick={() => HTMLFormControlsCollection.log('connect')} className="btn btn-outline-dark">Let's connect </button>
         </section>
     )
 }
