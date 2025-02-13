@@ -58,6 +58,11 @@ h1, h2, h3, h4, h5, h6{
   line-height: normal;
 }
 
+a{
+  text-decoration: none !important;
+  color: var(--accent-color1) !important;
+}
+
 /* Navigation */
 nav.navbar{
   width: 100%;
@@ -179,6 +184,81 @@ nav.navbar .navbar-toggler:focus {
   border: 1px solid var(--accent-color1);
 }
 
+/* About*/
+.about {
+  min-height: 100vh;
+  padding: 5rem 2rem;
+
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center;
+  align-items: flex-start;
+
+  border-bottom: 1px solid var(--accent-color1);
+}
+
+.about-img img{
+  width: 100%;
+  margin: auto;
+}
+
+.about-bx{
+  border-left: 1px solid var(--accent-color1) ;
+}
+
+.about-bx .about-head, .about-bx .tab-contents{
+  margin: 0 0 0 2rem;
+}
+
+.about-bx .about-head h2{
+  font-size: 4vw;
+  font-weight: 800;
+}
+
+.about-bx .tab-titles {
+  display: flex;
+  margin: 1rem 0 1.5rem 2rem;
+}
+
+.about-bx .tab-links {
+  margin: 0 2rem 0 0;
+  font-weight: 800;
+  cursor: pointer;
+  position: relative;
+}
+
+.about-bx .tab-links::after {
+  content: '';
+  width:0;
+  height:1.5px;
+  background: var(--accent-color2);
+  position: absolute;
+  left:0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+
+.about-bx .tab-links.active-link::after {
+  width:50%;
+}
+
+.about-bx .tab-contents ul li {
+  list-style: none;
+  margin: 1rem 0 0 0;
+}
+
+.about-bx .tab-contents ul li span{
+  color: var(--accent-color2);
+}
+
+.about-bx .tab-contents {
+  display: none;
+}
+
+.about-bx .tab-contents.active-tab {
+  display: block;
+}
+
 
 /* Skills */
 .skill{
@@ -231,7 +311,6 @@ nav.navbar .navbar-toggler:focus {
   margin: 1rem auto;
 }
 
-
 @media (max-width: 991.98px) { /* Bootstrap Standard Breakpoint for lg */
   nav.navbar a.navbar-brand{
     width: 25%;
@@ -257,5 +336,20 @@ nav.navbar .navbar-toggler:focus {
   .banner .wrap{
     font-size: 5vw;
     border-right: 0.4px solid #b1b1b1;
+  }
+  
+  .about-bx .about-head h2{
+    font-size: 5vw;
+    font-weight: 800;
+  }
+}
+
+@media (max-width: 767.5px){
+  .about-bx{
+    border-left: none;
+  }
+
+  .about-bx .about-head, .about-bx .tab-contents{
+    margin: 0;
   }
 }
