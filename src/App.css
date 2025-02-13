@@ -184,10 +184,11 @@ nav.navbar .navbar-toggler:focus {
   border: 1px solid var(--accent-color1);
 }
 
+
 /* About*/
 .about {
   min-height: 100vh;
-  padding: 5rem 2rem;
+  padding: 2rem;
 
   display: flex; 
   flex-direction: column; 
@@ -195,19 +196,6 @@ nav.navbar .navbar-toggler:focus {
   align-items: flex-start;
 
   border-bottom: 1px solid var(--accent-color1);
-}
-
-.about-img img{
-  width: 100%;
-  margin: auto;
-}
-
-.about-bx{
-  border-left: 1px solid var(--accent-color1) ;
-}
-
-.about-bx .about-head, .about-bx .tab-contents{
-  margin: 0 0 0 2rem;
 }
 
 .about-bx .about-head h2{
@@ -263,7 +251,7 @@ nav.navbar .navbar-toggler:focus {
 /* Skills */
 .skill{
   min-height: 100vh;
-  padding: 10rem 2rem 5rem 2rem;
+  padding: 2rem;
 
   display: flex; 
   flex-direction: column; 
@@ -279,7 +267,6 @@ nav.navbar .navbar-toggler:focus {
 }
 
 .skill-bx{
-  margin: -5rem 0 0 0;
   padding: 4rem 3rem;
   text-align: center;
 

@@ -12,14 +12,7 @@ export const About = () => {
         <section className='about' id='about'>
             <Container>
                 <Row>
-                    <Col xs={12} md={4} lg={4}>
-                        <div className='about-img'>
-                            <img src='' alt=''/>
-                            <p>img einfügen....</p>
-                        </div>
-                    </Col>
-
-                    <Col xs={12} md={8} lg={8}>
+                    <Col>
                         <div className='about-bx'>
                             <div className='about-head'>
                                 <h2>About Me</h2>
