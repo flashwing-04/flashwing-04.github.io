@@ -188,7 +188,7 @@ nav.navbar .navbar-toggler:focus {
 /* About*/
 .about {
   min-height: 100vh;
-  padding: 2rem;
+  padding: 5rem 2rem;
 
   display: flex; 
   flex-direction: column; 
