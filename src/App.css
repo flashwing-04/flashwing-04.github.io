@@ -3,16 +3,19 @@
   font-family: Centra;
   src: url('./assets/fonts/CentraNo1-Light.ttf') format('truetype');
   font-weight: 200;
+  font-style: normal;
 }
 @font-face{
   font-family: Centra;
   src: url('./assets/fonts/CentraNo1-Book.ttf') format('truetype') ;
   font-weight: 400;
+  font-style: normal;
 }
 @font-face{
   font-family: Centra;
   src: url('./assets/fonts/CentraNo1-Extrabold.ttf') format('truetype');
   font-weight: 800;
+  font-style: normal;
 }
 
 /* Colors & Defaults */
@@ -57,8 +60,8 @@ h1, h2, h3, h4, h5, h6{
 
 /* Navigation */
 nav.navbar{
-  width: 100vw;
-  padding: 2vh 0;
+  width: 100%;
+  padding: 2% 0;
   position: fixed;
   background: var(--background-color);
   border-bottom: 2px solid var(--accent-color1);
@@ -66,7 +69,7 @@ nav.navbar{
 }
 
 nav.navbar a.navbar-brand{
-  width: 10vw;
+  width: 10%;
 }
 
 nav.navbar .navbar-nav{
@@ -128,7 +131,7 @@ nav.navbar .navbar-toggler:focus {
 
 /* Banner */
 .banner {
-  height: 100vh;
+  min-height: 100vh;
   padding: 10rem 2rem 5rem 2rem;
 
   display: flex; 
@@ -148,8 +151,7 @@ nav.navbar .navbar-toggler:focus {
 }
 
 .banner h1 {
-  width: 60vw;
-  height: 15vh;
+  width: 65vw;
   font-size: 4vw;
   font-weight: 800;
   letter-spacing: 0.8px;
@@ -180,7 +182,7 @@ nav.navbar .navbar-toggler:focus {
 
 /* Skills */
 .skill{
-  height: 100vh;
+  min-height: 100vh;
   padding: 10rem 2rem 5rem 2rem;
 
   display: flex; 
@@ -255,9 +257,5 @@ nav.navbar .navbar-toggler:focus {
   .banner .wrap{
     font-size: 5vw;
     border-right: 0.4px solid #b1b1b1;
-  }
-
-  .skill h2{
-    font-size: 5vw;
   }
 }
