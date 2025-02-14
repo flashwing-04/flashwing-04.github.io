@@ -401,24 +401,12 @@ nav.navbar .navbar-toggler:focus {
   .banner h1{
     min-height: 120px;
     margin:2rem 0 0.5rem 0;
-    font-size: 5vw;
   }
+}
 
-  .banner .wrap{
-    font-size: 5vw;
-    border-right: 0.4px solid #b1b1b1;
-  }
+@media (max-width: 400px){
   
-  .about-bx .about-head h2{
-    font-size: 4vw;
-    font-weight: 800;
-  }
-
-  .skill h2{
-    font-size: 4vw;
-  }
-
-  .project h2 {
-    font-size: 4vw;
+  .banner h1{
+    min-height: 90px;
   }
 }
