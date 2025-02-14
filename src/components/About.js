@@ -1,14 +1,7 @@
-import { Container, Row, Col } from 'react-bootstrap';
-import { useState } from 'react';
+import { Container, Row, Col, Tab, Tabs } from 'react-bootstrap';
 
 export const About = () => {
-
-    const [activeTab, setActiveTab] = useState('experience')
-    const openTab = (tab) => {
-        setActiveTab(tab);
-    }
-
-    return(
+    return (
         <section className='about' id='about'>
             <Container>
                 <Row>
@@ -24,41 +17,36 @@ export const About = () => {
                                 </p>
                             </div>
 
-                            <div className="tab-titles">
-                                <p className={`tab-links ${activeTab === 'experience' ? 'active-link' : ''}`} onClick={() => openTab('experience')}>Experience</p>
-                                <p className={`tab-links ${activeTab === 'education' ? 'active-link' : ''}`} onClick={() => openTab('education')}>Education</p>
-                            </div>
+                            <Tabs defaultActiveKey="experience" id="about-tabs" className="mb-3">
+                                <Tab eventKey="experience" title="Experience">
+                                    <ul>
+                                        <li><span>2024 - present
+                                            <br/>...</span>
+                                            <br/>...
+                                            <br/>...
+                                        </li>
+                                    </ul>
+                                </Tab>
 
-                            <div className={`tab-contents ${activeTab === 'experience' ? 'active-tab' : ''}`} id="experience">
-                                <ul>
-                                    <li><span>2024 - present
-                                        <br/>...</span>
-                                        <br/>...
-                                        <br/>...
-                                    </li>
-                                    <li>
-                                        <br/><br/><br/><br/>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className={`tab-contents ${activeTab === 'education' ? 'active-tab' : ''}`} id="education">
-                                <ul>
-                                    <li><span>2023 - present
-                                        <br/>HTW: University of Applied Sciences, Berlin Germany</span>
-                                        <br/><a href='https://imi-bachelor.htw-berlin.de/studium/' target='blank'>Major: International Media and Computing</a>
-                                        <br/>Graduation expected: B.Sc. Summer 2026
-                                    </li>
-                                    <li><span>2014 - 2023
-                                        <br/>Immanuel-Kant-Gymnasium, Berlin Germany</span>
-                                        <br/>A-Levels
-                                        <br/>AP Classes: Math, English
-                                    </li>
-                                </ul>
-                            </div>
+                                <Tab eventKey="education" title="Education">
+                                    <ul>
+                                        <li><span>2023 - present
+                                            <br/>HTW: University of Applied Sciences, Berlin Germany</span>
+                                            <br/><a href='https://imi-bachelor.htw-berlin.de/studium/' target='blank'>Major: International Media and Computing</a>
+                                            <br/>Graduation expected: B.Sc. Summer 2026
+                                        </li>
+                                        <li><span>2014 - 2023
+                                            <br/>Immanuel-Kant-Gymnasium, Berlin Germany</span>
+                                            <br/>A-Levels
+                                            <br/>AP Classes: Math, English
+                                        </li>
+                                    </ul>
+                                </Tab>
+                            </Tabs>
                         </div>
                     </Col>
                 </Row>
             </Container>
         </section>
-    )
-}
+    );
+};

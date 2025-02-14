@@ -156,6 +156,7 @@ nav.navbar .navbar-toggler:focus {
 }
 
 .banner h1 {
+  min-height: 170px;
   width: 65vw;
   font-size: 4vw;
   font-weight: 800;
@@ -169,11 +170,12 @@ nav.navbar .navbar-toggler:focus {
 }
 
 .banner p {
-  margin: 3rem 0 0 0;
+  margin: 1rem 0 0 0;
   color: var(--text-color);
   letter-spacing: 0.8px;
   line-height: 1.5rem;
 }
+
 .banner button {
   display: flex;
   font-weight: 400;
@@ -185,7 +187,7 @@ nav.navbar .navbar-toggler:focus {
 }
 
 
-/* About*/
+/* About */
 .about {
   min-height: 100vh;
   padding: 5rem 2rem;
@@ -198,53 +200,69 @@ nav.navbar .navbar-toggler:focus {
   border-bottom: 1px solid var(--accent-color1);
 }
 
-.about-bx .about-head h2{
+.about-bx .about-head h2 {
   font-size: 4vw;
   font-weight: 800;
 }
 
-.about-bx .tab-titles {
-  display: flex;
-  margin: 1rem 0 1.5rem 2rem;
+.nav-tabs {
+  border-bottom: none !important; 
+  margin: 1rem 0 1.5rem 1rem;
 }
 
-.about-bx .tab-links {
+.nav-tabs .nav-link {
+  padding: 0.5rem 1rem;
   margin: 0 2rem 0 0;
+
+  color: var(--text-color);
+  background: none;
+
   font-weight: 800;
-  cursor: pointer;
+  border: none !important;  
   position: relative;
+  transition: color 0.3s ease-in-out;
+  outline: none; 
 }
 
-.about-bx .tab-links::after {
+.nav-tabs .nav-link::after {
   content: '';
-  width:0;
-  height:1.5px;
+  width: 0;
+  height: 2px;
   background: var(--accent-color2);
   position: absolute;
-  left:0;
-  bottom: -8px;
-  transition: 0.5s;
+  left: 0;
+  bottom: -2px;
+  transition: width 0.5s ease-in-out;
 }
 
-.about-bx .tab-links.active-link::after {
-  width:50%;
-}
-
-.about-bx .tab-contents ul li {
-  list-style: none;
-  margin: 1rem 0 0 0;
-}
-
-.about-bx .tab-contents ul li span{
+.nav-tabs .nav-link.active {
   color: var(--accent-color2);
 }
 
-.about-bx .tab-contents {
-  display: none;
+.nav-tabs .nav-link.active::after {
+  width: 50%;
 }
 
-.about-bx .tab-contents.active-tab {
-  display: block;
+.nav-tabs .nav-link:hover{
+  color: var(--accent-color2);
+}
+
+.tab-content {
+  min-height: 330px;
+  padding: 0 0 0 2rem;
+}
+
+.tab-content ul {
+  padding: 0;
+}
+
+.tab-content ul li {
+  list-style: none;
+  margin: 1rem 0;
+}
+
+.tab-content ul li span {
+  color: var(--accent-color2);
 }
 
 
@@ -257,11 +275,6 @@ nav.navbar .navbar-toggler:focus {
   flex-direction: column; 
   justify-content: center;
   align-items: flex-start;
-
-  /* TODO: find background 
-  background: url("");  
-  background-size: cover;
-  */
 
   border-bottom: 1px solid var(--accent-color1);
 }
@@ -298,6 +311,49 @@ nav.navbar .navbar-toggler:focus {
   margin: 1rem auto;
 }
 
+
+/* Projects */
+.project {
+  min-height: 100vh;
+  padding: 5rem 2rem;
+
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center;
+  align-items: flex-start;
+
+  border-bottom: 1px solid var(--accent-color1);
+}
+
+.project h2 {
+  font-size: 4vw;
+  font-weight: 800;
+}
+
+.nav-pills {
+  border-bottom: none;
+  margin: 0.5rem 0;
+}
+
+.nav-pills .nav-link {
+  color: var(--text-color);
+  background: none;
+  border: 1px solid var(--accent-color1);
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0 0 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-pills .nav-link.active {
+  background: var(--accent-color3) !important;
+}
+
+.nav-pills .nav-link:hover {
+  color: var(--accent-color3) !important;
+  background: var(--background-color) !important;
+  border-color: var(--accent-color3);
+}
+
 @media (max-width: 991.98px) { /* Bootstrap Standard Breakpoint for lg */
   nav.navbar a.navbar-brand{
     width: 25%;
@@ -317,6 +373,34 @@ nav.navbar .navbar-toggler:focus {
   }
 
   .banner h1{
+    min-height: 190px;
+    font-size: 6vw;
+  }
+
+  .banner .wrap{
+    font-size: 6vw;
+    border-right: 0.4px solid #b1b1b1;
+  }
+  
+  .about-bx .about-head h2{
+    font-size: 5vw;
+    font-weight: 800;
+  }
+
+  .skill h2{
+    font-size: 5vw;
+  }
+
+  .project h2 {
+    font-size: 5vw;
+  }
+}
+
+@media (max-width: 767.5px){
+  
+  .banner h1{
+    min-height: 120px;
+    margin:2rem 0 0.5rem 0;
     font-size: 5vw;
   }
 
@@ -326,17 +410,15 @@ nav.navbar .navbar-toggler:focus {
   }
   
   .about-bx .about-head h2{
-    font-size: 5vw;
+    font-size: 4vw;
     font-weight: 800;
   }
-}
 
-@media (max-width: 767.5px){
-  .about-bx{
-    border-left: none;
+  .skill h2{
+    font-size: 4vw;
   }
 
-  .about-bx .about-head, .about-bx .tab-contents{
-    margin: 0;
+  .project h2 {
+    font-size: 4vw;
   }
 }
