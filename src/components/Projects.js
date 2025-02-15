@@ -9,21 +9,25 @@ export const Projects = () => {
             title: "Title",
             description: ".........",
             imgUrl: projImg,
+            link: "",
         }, 
         {
             title: "Title",
             description: ".........",
             imgUrl: projImg,
+            link: "",
         }, 
         {
             title: "Title",
             description: ".........",
             imgUrl: projImg,
+            link: "",
         }, 
         {
             title: "Title",
             description: ".........",
             imgUrl: projImg,
+            link: "",
         }, 
     ]
 
@@ -32,21 +36,25 @@ export const Projects = () => {
           title: "Title",
           description: ".........",
           imgUrl: projImg,
+          link: "",
       }, 
       {
           title: "Title",
           description: ".........",
           imgUrl: projImg,
+          link: "",
       }, 
       {
           title: "Title",
           description: ".........",
           imgUrl: projImg,
+          link: "",
       }, 
       {
           title: "Title",
           description: ".........",
           imgUrl: projImg,
+          link: "",
       }, 
   ]
 
@@ -55,11 +63,13 @@ export const Projects = () => {
         title: "Title",
         description: ".........",
         imgUrl: projImg,
+        link: "",
     }, 
     {
         title: "Title",
         description: ".........",
         imgUrl: projImg,
+        link: "",
     }, 
 ]
 

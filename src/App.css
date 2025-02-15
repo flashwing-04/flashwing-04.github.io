@@ -376,7 +376,7 @@ nav.navbar .navbar-toggler:focus {
     height: 0;
     transition: 0.5s ease-in-out;
 }
-/* #FFBAE4 #85C9B1*/
+
 .proj-img-bx:hover::before {
     height: 100%;
 }
