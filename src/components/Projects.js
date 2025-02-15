@@ -1,29 +1,67 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap"
 import { ProjectCard } from "./ProjectCard"
 
+import projImg from '../assets/img/projImg/placeholder.svg'
+
 export const Projects = () => {
     const projects1 = [
         {
             title: "Title",
             description: ".........",
-            imgUrl: "projImg1",
+            imgUrl: projImg,
         }, 
         {
             title: "Title",
             description: ".........",
-            imgUrl: "projImg2",
+            imgUrl: projImg,
         }, 
         {
             title: "Title",
             description: ".........",
-            imgUrl: "projImg3",
+            imgUrl: projImg,
         }, 
         {
             title: "Title",
             description: ".........",
-            imgUrl: "projImg4",
+            imgUrl: projImg,
         }, 
     ]
+
+    const projects2 = [
+      {
+          title: "Title",
+          description: ".........",
+          imgUrl: projImg,
+      }, 
+      {
+          title: "Title",
+          description: ".........",
+          imgUrl: projImg,
+      }, 
+      {
+          title: "Title",
+          description: ".........",
+          imgUrl: projImg,
+      }, 
+      {
+          title: "Title",
+          description: ".........",
+          imgUrl: projImg,
+      }, 
+  ]
+
+  const projects3 = [
+    {
+        title: "Title",
+        description: ".........",
+        imgUrl: projImg,
+    }, 
+    {
+        title: "Title",
+        description: ".........",
+        imgUrl: projImg,
+    }, 
+]
 
     return (
         <section className="project" id="projects">
@@ -68,8 +106,34 @@ export const Projects = () => {
                                     }
                                     </Row>
                                 </Tab.Pane>
-                                <Tab.Pane eventKey="second">Second tab content</Tab.Pane>
-                                <Tab.Pane eventKey="third">Third tab content</Tab.Pane>
+                                <Tab.Pane eventKey="second">
+                                    <Row>
+                                    {
+                                        projects2.map((project, index) => {
+                                            return(
+                                                <ProjectCard
+                                                    key={index}
+                                                    {...project}
+                                                />
+                                            )
+                                        })
+                                    }
+                                    </Row>
+                                </Tab.Pane>
+                                <Tab.Pane eventKey="third">
+                                <Row>
+                                    {
+                                        projects3.map((project, index) => {
+                                            return(
+                                                <ProjectCard
+                                                    key={index}
+                                                    {...project}
+                                                />
+                                            )
+                                        })
+                                    }
+                                    </Row>
+                                </Tab.Pane>
                               </Tab.Content>
                             </Col>
                           </Row>
