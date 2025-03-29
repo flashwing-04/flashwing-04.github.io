@@ -2,76 +2,39 @@ import { Container, Row, Col, Tab, Nav } from "react-bootstrap"
 import { ProjectCard } from "./ProjectCard"
 
 import projImg from '../assets/img/projImg/placeholder.svg'
+import guessTheLyricsImg from '../assets/img/projImg/thumbnail_guess_the_lyrics.jpg'
 
 export const Projects = () => {
     const projects1 = [
         {
-            title: "Title",
-            description: ".........",
+            title: "Guess The Lyrics",
+            imgUrl: guessTheLyricsImg,
+            link: "https://flashwing-04.github.io/guess_the_lyrics/",
+        }, 
+        {
+            title: "Coming soon ...",
             imgUrl: projImg,
             link: "",
         }, 
         {
-            title: "Title",
-            description: ".........",
+            title: "Coming soon ...",
             imgUrl: projImg,
             link: "",
         }, 
         {
-            title: "Title",
-            description: ".........",
-            imgUrl: projImg,
-            link: "",
-        }, 
-        {
-            title: "Title",
-            description: ".........",
+            title: "Coming soon ...",
             imgUrl: projImg,
             link: "",
         }, 
     ]
 
     const projects2 = [
-      {
-          title: "Title",
-          description: ".........",
-          imgUrl: projImg,
-          link: "",
-      }, 
-      {
-          title: "Title",
-          description: ".........",
-          imgUrl: projImg,
-          link: "",
-      }, 
-      {
-          title: "Title",
-          description: ".........",
-          imgUrl: projImg,
-          link: "",
-      }, 
-      {
-          title: "Title",
-          description: ".........",
-          imgUrl: projImg,
-          link: "",
-      }, 
-  ]
+      
+    ]
 
-  const projects3 = [
-    {
-        title: "Title",
-        description: ".........",
-        imgUrl: projImg,
-        link: "",
-    }, 
-    {
-        title: "Title",
-        description: ".........",
-        imgUrl: projImg,
-        link: "",
-    }, 
-]
+    const projects3 = [
+    
+    ]
 
     return (
         <section className="project" id="projects">
@@ -80,23 +43,21 @@ export const Projects = () => {
                     <Col>
                         <h2>Projects</h2>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            The following projects showcase a mix of my work in software development, design, and problem-solving. <br/>
+                            Each project reflects my approach to overcoming challenges, creating innovative solutions, and optimizing user experiences. I combine technical expertise with creativity to deliver intuitive, functional applications, always focusing on making the user experience seamless and engaging.
                         </p>
                         <Tab.Container id="projects-tabs" defaultActiveKey="first">
                           <Row>
                             <Col sm={3}>
                               <Nav variant="pills" className="flex-column">
                                 <Nav.Item>
-                                  <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                                  <Nav.Link eventKey="first">Web Dev</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                  <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                                  <Nav.Link eventKey="second">Coming Soon ...</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                  <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                                  <Nav.Link eventKey="third">Coming Soon ...</Nav.Link>
                                 </Nav.Item>
                               </Nav>
                             </Col>

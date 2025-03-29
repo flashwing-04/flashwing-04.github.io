@@ -10,20 +10,23 @@ export const About = () => {
                             <div className='about-head'>
                                 <h2>About Me</h2>
                                 <p> 
-                                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                                   Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                                   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    Whether it’s solving complex problems or crafting sleek, user-friendly designs, I’m always looking for ways to improve and innovate. <br/>
+                                    With a focus on software development and web technologies, I enjoy turning ideas into practical solutions that are both functional and engaging. <br/>
+                                    I thrive on learning new tools and techniques, always pushing myself to evolve.
                                 </p>
                             </div>
 
                             <Tabs defaultActiveKey="experience" id="about-tabs" className="mb-3">
                                 <Tab eventKey="experience" title="Experience">
                                     <ul>
-                                        <li><span>2024 - present
-                                            <br/>...</span>
-                                            <br/>...
-                                            <br/>...
+                                        <li><span>August 2024 - present
+                                            <br/>Student Assistant</span>
+                                            <br/>HTW: University of Applied Sciences, Berlin Germany
+                                            <ul>
+                                                <li>Assisted in the development and maintenance of the Modulehandbook web application. You can check it out <a href='https://module-handbook.f4.htw-berlin.de/' target='blank'><span>here</span></a></li>
+                                                <li>Worked on technical tasks, including troubleshooting server issues, deploying updates, and managing system configurations</li>
+                                                <li>Took on a variety of general tasks, from helping with project coordination to assisting with technical and administrative needs</li>
+                                            </ul>
                                         </li>
                                     </ul>
                                 </Tab>

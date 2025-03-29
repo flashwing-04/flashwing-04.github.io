@@ -33,7 +33,7 @@ export const Skills = () => {
                     <Col>
                         <div className='skill-bx'>
                             <h2>Skills</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </p>
+                            <p>With a broad technical skill set and hands-on experience, I have the ability to adapt to various challenges. The following list highlights the skills I’ve mastered so far.</p>
                             <Carousel responsive={responsive} infinite={true} className='skill-slider'>
                                 <div className="skill-item">
                                     <img src={meter1} alt=""/>

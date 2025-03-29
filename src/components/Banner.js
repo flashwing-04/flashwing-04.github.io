@@ -7,7 +7,7 @@ export const Banner = () => {
     // typing Animation
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = ["undergrad Computer Science Student", "<placeholder for really cool text>"]
+    const toRotate = ["undergrad Computer Science student", "aspiring software developer"]
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300-Math.random()*100)
     const period = 2000;
@@ -50,7 +50,11 @@ export const Banner = () => {
                         <div id="headline">
                             <h1>{'Hi, I\'m an '}<span className="wrap">{text}</span></h1>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                        <p>
+                            Hi, I’m Charlotte, a Computer Science student with a deep passion for technology, design, and digital innovation. <br/>
+                            During my studies, I have delved into software development, web technologies, and visual computing, exploring how to create efficient, scalable applications and engaging digital experiences through a blend of coding, design, and problem-solving. <br/>
+                            This portfolio showcases some of my latest work. Feel free to explore and reach out!
+                        </p>
                         <button onClick={() => HTMLFormControlsCollection.log('connect')} className="btn btn-outline-dark">Let's connect </button>
                     </Col>
                 </Row>
