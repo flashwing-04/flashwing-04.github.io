@@ -5,6 +5,8 @@ import 'react-multi-carousel/lib/styles.css';
 import meter1 from "../assets/img/meter1.svg"
 import meter2 from "../assets/img/meter2.svg"
 import meter3 from "../assets/img/meter3.svg"
+import meter4 from "../assets/img/meter4.svg"
+import meter5 from "../assets/img/meter5.svg"
 
 export const Skills = () => {
     const responsive = {
@@ -37,23 +39,39 @@ export const Skills = () => {
                             <Carousel responsive={responsive} infinite={true} className='skill-slider'>
                                 <div className="skill-item">
                                     <img src={meter1} alt=""/>
-                                    <h5>Skill 1</h5>
+                                    <h5>Java</h5>
                                 </div>
                                 <div className="skill-item">
                                     <img src={meter2} alt=""/>
-                                    <h5>Skill 2</h5>
+                                    <h5>Python</h5>
+                                </div>
+                                <div className="skill-item">
+                                    <img src={meter5} alt=""/>
+                                    <h5>Ruby</h5>
+                                </div>
+                                <div className="skill-item">
+                                    <img src={meter1} alt=""/>
+                                    <h5>HTML</h5>
+                                </div>
+                                <div className="skill-item">
+                                    <img src={meter2} alt=""/>
+                                    <h5>JavaScript</h5>
                                 </div>
                                 <div className="skill-item">
                                     <img src={meter3} alt=""/>
-                                    <h5>Skill 3</h5>
+                                    <h5>CSS</h5>
                                 </div>
                                 <div className="skill-item">
-                                    <img src={meter2} alt=""/>
-                                    <h5>Skill 4</h5>
+                                    <img src={meter4} alt=""/>
+                                    <h5>OpenGL</h5>
                                 </div>
                                 <div className="skill-item">
-                                    <img src={meter2} alt=""/>
-                                    <h5>Skill 5</h5>
+                                    <img src={meter4} alt=""/>
+                                    <h5>SQL</h5>
+                                </div>
+                                <div className="skill-item">
+                                    <img src={meter5} alt=""/>
+                                    <h5>Maya</h5>
                                 </div>
                             </Carousel>
                         </div>
